@@ -12,6 +12,23 @@
 
     <title>Hello, world!</title>
 </head>
+        <style>
+            /* Hover negro solo en la barra roja */
+            .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .nav-link:hover,
+            .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .nav-link:focus {
+                background-color: #111 !important;
+                color: #fff !important;
+            }
+            /* Mostrar dropdown solo al pasar el mouse en la barra roja */
+            .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+            .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .dropdown-menu {
+                border-radius: 0 0 0.5rem 0.5rem;
+                margin-top: 0;
+            }
+        </style>
 
 <body>
     <header>
@@ -24,62 +41,127 @@
                 </span>
             </div>
             <!-- Barra principal -->
-            <div class="row align-items-center py-3 px-5">
-                <!-- Izquierda: imágenes y textos con pipes -->
-                <div class="col-auto d-flex align-items-center pr-0">
-                    <img src="img/download.jpg" width="32" height="32" class="img-fluid rounded mr-2" alt="Portada">
-                    <span class="font-weight-bold mr-3">La portada de hoy</span>
-                    <div class="border-left mx-2" style="height: 32px; border-color: #ccc;"></div>
-                    <img src="img/RadioMARCA.svg.png" width="32" height="32" class="img-fluid mr-2" alt="Radio MARCA">
-                    <span class="font-weight-bold mr-3">Radio MARCA</span>
-                    <div class="border-left mx-2" style="height: 32px; border-color: #ccc;"></div>
-                    <img src="img/1sITgoTL_400x400.jpg" width="32" height="32" class="img-fluid mr-2" alt="CuídatePlus">
-                    <span class="font-weight-bold mr-3">CuídatePlus</span>
-                </div>
-                <!-- Centro: logo MARCA -->
-                <div class="col d-flex justify-content-center align-items-center">
-                    <img src="img/Marca.svg.png" height="56" class="" alt="MARCA">
-                </div>
-                <!-- Derecha: botones -->
-                <div class="col-auto d-flex align-items-center pl-0">
-                    <button class="btn  border mr-2 d-flex align-items-center">
-                        <img src="img/download.jpg" width="20" height="14" class="mr-1" alt="ES"> <span class="ml-1">ES</span>
-                    </button>
-                    <button class="btn btn-outline-warning font-weight-bold mr-2 px-3">
-                        <span style="color: #d6001c;">CLUB</span><span style="color: #333;">MARCA</span>
-                    </button>
-                    <button class="btn border font-weight-bold px-3 d-flex align-items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person mr-1" viewBox="0 0 16 16">
-                          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 14s-1 0-1-1 1-4 7-4 7 3 7 4-1 1-1 1H2z"/>
-                        </svg>
-                        <span class="ml-1">Iniciar sesión</span>
-                    </button>
+            <div class="row align-items-center pt-2 px-5 pb-3">
+                <div class="col-12 d-flex align-items-center justify-content-between position-relative">
+                    <!-- Izquierda: imágenes y textos con pipes -->
+                    <div class="d-flex align-items-center pr-0 ">
+                        <button class="btn btn-link p-0 mr-2" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img src="img/download.jpg" width="32" height="32" class="img-fluid rounded" alt="Portada"></button>
+                        <button class="btn btn-link font-weight-bold mr-3" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">La portada de hoy</button>
+                        <div class="border-left mx-2" style="height: 32px;"></div>
+                        <button class="btn btn-link p-0 mr-2" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img src="img/RadioMARCA.svg.png" width="32" height="32" class="img-fluid" alt="Radio MARCA"></button>
+                        <button class="btn btn-link font-weight-bold mr-3" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">Radio MARCA</button>
+                        <div class="border-left mx-2" style="height: 32px;"></div>
+                        <button class="btn btn-link p-0 mr-2" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img src="img/1sITgoTL_400x400.jpg" width="32" height="32" class="img-fluid" alt="CuídatePlus"></button>
+                        <button class="btn btn-link font-weight-bold mr-3" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">CuídatePlus</button>
+                    </div>
+                    <!-- Centro absoluto: logo MARCA -->
+                    <div class="position-absolute w-100 d-flex justify-content-center" style="left:0;top:0;bottom:0;pointer-events:none;">
+                        <button class="btn btn-link p-0" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img src="img/Marca.svg.png" height="56" alt="MARCA" style="pointer-events:auto;"></button>
+                    </div>
+                    <!-- Derecha: botones -->
+                    <div class="d-flex align-items-center pl-0">
+                        <button class="btn  border mr-2 d-flex align-items-center">
+                            <img src="img/download.jpg" width="20" height="14" class="mr-1" alt="ES"> <span class="ml-1">ES</span>
+                        </button>
+                        <button class="btn btn-outline-warning font-weight-bold mr-2 px-3">
+                            <span style="color: #d6001c;">CLUB</span><span style="color: #333;">MARCA</span>
+                        </button>
+                        <button class="btn border font-weight-bold px-3 d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person mr-1" viewBox="0 0 16 16">
+                              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 14s-1 0-1-1 1-4 7-4 7 3 7 4-1 1-1 1H2z"/>
+                            </svg>
+                            <span class="ml-1">Iniciar sesión</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+        <!-- Barra de navegación secundaria con menús desplegables -->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #c00;">
+        <div class="container px-0">
+                <ul class="navbar-nav mx-auto w-100 d-flex flex-row justify-content-center">
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="futbolDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fútbol</a>
+                        <div class="dropdown-menu" aria-labelledby="futbolDropdown">
+                            <a class="dropdown-item" href="#">LaLiga EA Sports</a>
+                            <a class="dropdown-item" href="#">LaLiga Hypermotion</a>
+                            <a class="dropdown-item" href="#">Champions League</a>
+                            <a class="dropdown-item" href="#">Europa League</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="baloncestoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Baloncesto</a>
+                        <div class="dropdown-menu" aria-labelledby="baloncestoDropdown">
+                            <a class="dropdown-item" href="#">Liga Endesa</a>
+                            <a class="dropdown-item" href="#">NBA</a>
+                            <a class="dropdown-item" href="#">Euroliga</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="motorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Motor</a>
+                        <div class="dropdown-menu" aria-labelledby="motorDropdown">
+                            <a class="dropdown-item" href="#">Fórmula 1</a>
+                            <a class="dropdown-item" href="#">MotoGP</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="polideportivoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Polideportivo</a>
+                        <div class="dropdown-menu" aria-labelledby="polideportivoDropdown">
+                            <a class="dropdown-item" href="#">Tenis</a>
+                            <a class="dropdown-item" href="#">Ciclismo</a>
+                            <a class="dropdown-item" href="#">Atletismo</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="cochesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Coches</a>
+                        <div class="dropdown-menu" aria-labelledby="cochesDropdown">
+                            <a class="dropdown-item" href="#">Actualidad</a>
+                            <a class="dropdown-item" href="#">Pruebas</a>
+                        </div>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link font-weight-bold text-white" href="#">Última hora</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link font-weight-bold text-white" href="#">Fantasy</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link font-weight-bold text-white" href="#">Agenda TV</a>
+                    </li>
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="masDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Más +</a>
+                        <div class="dropdown-menu" aria-labelledby="masDropdown">
+                            <a class="dropdown-item" href="#">E-Sports</a>
+                            <a class="dropdown-item" href="#">Golf</a>
+                            <a class="dropdown-item" href="#">Otros deportes</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <!-- Barra de escudos -->
     <div class="bg-light border-bottom">
         <div class="container d-flex flex-wrap justify-content-center py-2">
-            <img src="img/1Alaves.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/2Atletico-de-bilbao.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/4Barca.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/5betis.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/6celta-de-vigo.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/7elche.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/8Espanyol.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/9getafe.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/10girona.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/11levante.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/12mallorca.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/13osasuna.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/14oviedo.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/15rayo-vallecano.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/16real-madrid.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/17real-sociedad.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/18sevilla.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/19valencia.png" alt="Equipo" class="mx-2" style="height:30px;">
-            <img src="img/20villarreal.png" alt="Equipo" class="mx-2" style="height:30px;">
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/1Alaves.png" alt="Alaves" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/2Atletico-de-bilbao.png" alt="Atletico de Bilbao" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/4Barca.png" alt="Barca" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/5betis.png" alt="Betis" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/6celta-de-vigo.png" alt="Celta de Vigo" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/7elche.png" alt="Elche" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/8Espanyol.png" alt="Espanyol" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/9getafe.png" alt="Getafe" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/10girona.png" alt="Girona" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/11levante.png" alt="Levante" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/12mallorca.png" alt="Mallorca" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/13osasuna.png" alt="Osasuna" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/14oviedo.png" alt="Oviedo" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/15rayo-vallecano.png" alt="Rayo Vallecano" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/16real-madrid.png" alt="Real Madrid" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/17real-sociedad.png" alt="Real Sociedad" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/18sevilla.png" alt="Sevilla" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/19valencia.png" alt="Valencia" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/20villarreal.png" alt="Villarreal" style="height:30px;"></button>
             <!-- Más escudos aquí -->
         </div>
     </div>
