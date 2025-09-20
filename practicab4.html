@@ -12,78 +12,105 @@
 
     <title>Hello, world!</title>
 </head>
-        <style>
-            /* Hover negro solo en la barra roja */
-            .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .nav-link:hover,
-            .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .nav-link:focus {
-                background-color: #111 !important;
-                color: #fff !important;
-            }
-            /* Mostrar dropdown solo al pasar el mouse en la barra roja */
-            .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .dropdown:hover .dropdown-menu {
-                display: block;
-                margin-top: 0;
-            }
-            .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .dropdown-menu {
-                border-radius: 0 0 0.5rem 0.5rem;
-                margin-top: 0;
-            }
-        </style>
+<style>
+    /* Hover negro solo en la barra roja */
+    .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .nav-link:hover,
+    .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .nav-link:focus {
+        background-color: #111 !important;
+        color: #fff !important;
+    }
+
+    /* Mostrar dropdown solo al pasar el mouse en la barra roja */
+    .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .dropdown-menu {
+        border-radius: 0 0 0.5rem 0.5rem;
+        margin-top: 0;
+    }
+</style>
 
 <body class="d-flex flex-column min-vh-100">
     <div class="flex-grow-1">
         <header>
-        <div class="container-fluid px-0">
-            <!-- Barra de noticias -->
-            <div class="bg-light border-bottom py-2 px-3 d-flex flex-nowrap align-items-center justify-content-center w-100">
-                <span class="font-weight-bold mr-2 small mb-0">Es noticia:</span>
-                <span class="small text-muted text-truncate mb-0" style="white-space: nowrap; font-size: 0.75rem;">
-                    Vuelta a España | Mercado de fichajes | Horario libres MotoGP | Perfil Vuelta a España hoy | Grecia - Turquía dónde ver | Las Palmas - Real Sociedad B dónde ver | Partidos hoy EuroBasket | Alemania - Finlandia dónde ver | Calendario Mundial Atletismo
-                </span>
-            </div>
-            <!-- Barra principal -->
-            <div class="row align-items-center pt-2 px-5 pb-3">
-                <div class="col-12 d-flex align-items-center justify-content-between position-relative">
-                    <!-- Izquierda: imágenes y textos con pipes -->
-                    <div class="d-flex align-items-center pr-0 ">
-                        <button class="btn btn-link p-0 mr-2" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img src="img/download.jpg" width="32" height="32" class="img-fluid rounded" alt="Portada"></button>
-                        <button class="btn btn-link font-weight-bold mr-3" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">La portada de hoy</button>
-                        <div class="border-left mx-2" style="height: 32px;"></div>
-                        <button class="btn btn-link p-0 mr-2" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img src="img/RadioMARCA.svg.png" width="32" height="32" class="img-fluid" alt="Radio MARCA"></button>
-                        <button class="btn btn-link font-weight-bold mr-3" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">Radio MARCA</button>
-                        <div class="border-left mx-2" style="height: 32px;"></div>
-                        <button class="btn btn-link p-0 mr-2" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img src="img/1sITgoTL_400x400.jpg" width="32" height="32" class="img-fluid" alt="CuídatePlus"></button>
-                        <button class="btn btn-link font-weight-bold mr-3" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">CuídatePlus</button>
-                    </div>
-                    <!-- Centro absoluto: logo MARCA -->
-                    <div class="position-absolute w-100 d-flex justify-content-center" style="left:0;top:0;bottom:0;pointer-events:none;">
-                        <button class="btn btn-link p-0" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img src="img/Marca.svg.png" height="56" alt="MARCA" style="pointer-events:auto;"></button>
-                    </div>
-                    <!-- Derecha: botones -->
-                    <div class="d-flex align-items-center pl-0">
-                        <button class="btn  border mr-2 d-flex align-items-center">
-                            <img src="img/download.jpg" width="20" height="14" class="mr-1" alt="ES"> <span class="ml-1">ES</span>
-                        </button>
-                        <button class="btn btn-outline-warning font-weight-bold mr-2 px-3">
-                            <span style="color: #d6001c;">CLUB</span><span style="color: #333;">MARCA</span>
-                        </button>
-                        <button class="btn border font-weight-bold px-3 d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person mr-1" viewBox="0 0 16 16">
-                              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 14s-1 0-1-1 1-4 7-4 7 3 7 4-1 1-1 1H2z"/>
-                            </svg>
-                            <span class="ml-1">Iniciar sesión</span>
-                        </button>
+            <div class="container-fluid px-0">
+                <!-- Barra de noticias -->
+                <div
+                    class="bg-light border-bottom py-2 px-3 d-flex flex-nowrap align-items-center justify-content-center w-100">
+                    <span class="font-weight-bold mr-2 small mb-0">Es noticia:</span>
+                    <span class="small text-muted text-truncate mb-0" style="white-space: nowrap; font-size: 0.75rem;">
+                        Vuelta a España | Mercado de fichajes | Horario libres MotoGP | Perfil Vuelta a España hoy |
+                        Grecia - Turquía dónde ver | Las Palmas - Real Sociedad B dónde ver | Partidos hoy EuroBasket |
+                        Alemania - Finlandia dónde ver | Calendario Mundial Atletismo
+                    </span>
+                </div>
+                <!-- Barra principal -->
+                <div class="row align-items-center pt-2 px-5 pb-3">
+                    <div class="col-12 d-flex align-items-center justify-content-between position-relative">
+                        <!-- Izquierda: imágenes y textos con pipes -->
+                        <div class="d-flex align-items-center pr-0 ">
+                            <button class="btn btn-link p-0 mr-2"
+                                style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img
+                                    src="img/download.jpg" width="32" height="32" class="img-fluid rounded"
+                                    alt="Portada"></button>
+                            <button class="btn btn-link font-weight-bold mr-3"
+                                style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">La
+                                portada de hoy</button>
+                            <div class="border-left mx-2" style="height: 32px;"></div>
+                            <button class="btn btn-link p-0 mr-2"
+                                style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img
+                                    src="img/RadioMARCA.svg.png" width="32" height="32" class="img-fluid"
+                                    alt="Radio MARCA"></button>
+                            <button class="btn btn-link font-weight-bold mr-3"
+                                style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">Radio
+                                MARCA</button>
+                            <div class="border-left mx-2" style="height: 32px;"></div>
+                            <button class="btn btn-link p-0 mr-2"
+                                style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img
+                                    src="img/1sITgoTL_400x400.jpg" width="32" height="32" class="img-fluid"
+                                    alt="CuídatePlus"></button>
+                            <button class="btn btn-link font-weight-bold mr-3"
+                                style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">CuídatePlus</button>
+                        </div>
+                        <!-- Centro absoluto: logo MARCA -->
+                        <div class="position-absolute w-100 d-flex justify-content-center"
+                            style="left:0;top:0;bottom:0;pointer-events:none;">
+                            <button class="btn btn-link p-0"
+                                style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img
+                                    src="img/Marca.svg.png" height="56" alt="MARCA"
+                                    style="pointer-events:auto;"></button>
+                        </div>
+                        <!-- Derecha: botones -->
+                        <div class="d-flex align-items-center pl-0">
+                            <button class="btn  border mr-2 d-flex align-items-center">
+                                <img src="img/download.jpg" width="20" height="14" class="mr-1" alt="ES"> <span
+                                    class="ml-1">ES</span>
+                            </button>
+                            <button class="btn btn-outline-warning font-weight-bold mr-2 px-3">
+                                <span style="color: #d6001c;">CLUB</span><span style="color: #333;">MARCA</span>
+                            </button>
+                            <button class="btn border font-weight-bold px-3 d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-person mr-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 14s-1 0-1-1 1-4 7-4 7 3 7 4-1 1-1 1H2z" />
+                                </svg>
+                                <span class="ml-1">Iniciar sesión</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
         <!-- Barra de navegación secundaria con menús desplegables -->
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #c00;">
-        <div class="container px-0">
+            <div class="container px-0">
                 <ul class="navbar-nav mx-auto w-100 d-flex flex-row justify-content-center">
                     <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="futbolDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fútbol</a>
+                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="futbolDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fútbol</a>
                         <div class="dropdown-menu" aria-labelledby="futbolDropdown">
                             <a class="dropdown-item" href="#">LaLiga EA Sports</a>
                             <a class="dropdown-item" href="#">LaLiga Hypermotion</a>
@@ -92,7 +119,9 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="baloncestoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Baloncesto</a>
+                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="baloncestoDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">Baloncesto</a>
                         <div class="dropdown-menu" aria-labelledby="baloncestoDropdown">
                             <a class="dropdown-item" href="#">Liga Endesa</a>
                             <a class="dropdown-item" href="#">NBA</a>
@@ -100,14 +129,17 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="motorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Motor</a>
+                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="motorDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Motor</a>
                         <div class="dropdown-menu" aria-labelledby="motorDropdown">
                             <a class="dropdown-item" href="#">Fórmula 1</a>
                             <a class="dropdown-item" href="#">MotoGP</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="polideportivoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Polideportivo</a>
+                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#"
+                            id="polideportivoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">Polideportivo</a>
                         <div class="dropdown-menu" aria-labelledby="polideportivoDropdown">
                             <a class="dropdown-item" href="#">Tenis</a>
                             <a class="dropdown-item" href="#">Ciclismo</a>
@@ -115,7 +147,8 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="cochesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Coches</a>
+                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="cochesDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Coches</a>
                         <div class="dropdown-menu" aria-labelledby="cochesDropdown">
                             <a class="dropdown-item" href="#">Actualidad</a>
                             <a class="dropdown-item" href="#">Pruebas</a>
@@ -131,7 +164,8 @@
                         <a class="nav-link font-weight-bold text-white" href="#">Agenda TV</a>
                     </li>
                     <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="masDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Más +</a>
+                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="masDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Más +</a>
                         <div class="dropdown-menu" aria-labelledby="masDropdown">
                             <a class="dropdown-item" href="#">E-Sports</a>
                             <a class="dropdown-item" href="#">Golf</a>
@@ -142,67 +176,221 @@
             </div>
         </nav>
         <!-- Barra de escudos -->
-    <div class="bg-light border-bottom">
-        <div class="container d-flex flex-wrap justify-content-center py-2">
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/1Alaves.png" alt="Alaves" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/2Atletico-de-bilbao.png" alt="Atletico de Bilbao" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/4Barca.png" alt="Barca" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/5betis.png" alt="Betis" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/6celta-de-vigo.png" alt="Celta de Vigo" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/7elche.png" alt="Elche" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/8Espanyol.png" alt="Espanyol" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/9getafe.png" alt="Getafe" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/10girona.png" alt="Girona" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/11levante.png" alt="Levante" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/12mallorca.png" alt="Mallorca" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/13osasuna.png" alt="Osasuna" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/14oviedo.png" alt="Oviedo" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/15rayo-vallecano.png" alt="Rayo Vallecano" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/16real-madrid.png" alt="Real Madrid" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/17real-sociedad.png" alt="Real Sociedad" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/18sevilla.png" alt="Sevilla" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/19valencia.png" alt="Valencia" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/20villarreal.png" alt="Villarreal" style="height:30px;"></button>
-            <!-- Más escudos aquí -->
+        <div class="bg-light border-bottom">
+            <div class="container d-flex flex-wrap justify-content-center py-2">
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/1Alaves.png" alt="Alaves"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/2Atletico-de-bilbao.png"
+                        alt="Atletico de Bilbao" style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/4Barca.png" alt="Barca"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/5betis.png" alt="Betis"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/6celta-de-vigo.png" alt="Celta de Vigo"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/7elche.png" alt="Elche"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/8Espanyol.png" alt="Espanyol"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/9getafe.png" alt="Getafe"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/10girona.png" alt="Girona"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/11levante.png" alt="Levante"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/12mallorca.png" alt="Mallorca"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/13osasuna.png" alt="Osasuna"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/14oviedo.png" alt="Oviedo"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/15rayo-vallecano.png"
+                        alt="Rayo Vallecano" style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/16real-madrid.png" alt="Real Madrid"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/17real-sociedad.png" alt="Real Sociedad"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/18sevilla.png" alt="Sevilla"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/19valencia.png" alt="Valencia"
+                        style="height:30px;"></button>
+                <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/20villarreal.png" alt="Villarreal"
+                        style="height:30px;"></button>
+                <!-- Más escudos aquí -->
+            </div>
         </div>
-    </div>
 
-        <!-- Contenido principal para demostrar el sticky footer -->
-        <main class="container my-5">
+        <!-- Contenido principal -->
+        <section class="container-fluid px-4 py-4">
+            <!-- Primera fila de noticias principales -->
             <div class="row">
-                <div class="col-12">
-                    <h1 class="display-4 text-center mb-4">Bienvenido a MARCA</h1>
-                    <p class="lead text-center">El diario deportivo líder en España</p>
-                    
-                    <div class="row mt-5">
-                        <div class="col-md-4 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Fútbol</h5>
-                                    <p class="card-text">Las últimas noticias del mundo del fútbol nacional e internacional.</p>
-                                </div>
+                <!-- Primera noticia - Felix Orode -->
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                    <div class="card border-0 h-100 d-flex flex-column">
+                        <div class="position-relative">
+                            <img src="img/2.jpg" class="card-img-top" alt="Felix Orode"
+                                style="height: 220px; object-fit: cover; border-radius: 0;">
+                            <span class="badge position-absolute px-2 py-1"
+                                style="top: 8px; left: 8px; background-color: #007bff; color: white; font-size: 0.7rem; font-weight: bold;">FÚTBOL</span>
+                        </div>
+                        <div class="card-body p-3 d-flex flex-column flex-grow-1">
+                            <h5 class="card-title font-weight-bold mb-2 text-dark"
+                                style="font-size: 1rem; line-height: 1.2;">
+                                Felix Orode, el jugador nigeriano que explica el festejo de Dele Alli
+                            </h5>
+                            <div class="mt-auto">
+                                <hr class="my-2" style="border-color: #ddd;">
                             </div>
                         </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Baloncesto</h5>
-                                    <p class="card-text">Toda la actualidad del baloncesto nacional e internacional.</p>
-                                </div>
+                    </div>
+                </div>
+
+                <!-- Segunda noticia - Cristiano -->
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                    <div class="card border-0 h-100 d-flex flex-column">
+                        <div class="position-relative">
+                            <img src="img/3.jpg" class="card-img-top" alt="Cristiano"
+                                style="height: 220px; object-fit: cover; border-radius: 0;">
+                            <span class="badge position-absolute px-2 py-1"
+                                style="top: 8px; left: 8px; background-color: #17a2b8; color: white; font-size: 0.7rem; font-weight: bold;">SERIE
+                                A</span>
+                        </div>
+                        <div class="card-body p-3 d-flex flex-column flex-grow-1">
+                            <h5 class="card-title font-weight-bold mb-2 text-dark"
+                                style="font-size: 1rem; line-height: 1.2;">
+                                Cristiano habla sobre Cuadrado y la cesión del número 7
+                            </h5>
+                            <div class="mt-auto">
+                                <p class="text-muted mb-0" style="font-size: 0.8rem;">REDACCIÓN MARCA CLARO</p>
+                                <hr class="my-2" style="border-color: #ddd;">
                             </div>
                         </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Motor</h5>
-                                    <p class="card-text">Fórmula 1, MotoGP y toda la información del mundo del motor.</p>
-                                </div>
+                    </div>
+                </div>
+
+                <!-- Tercera noticia - La joya celeste -->
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                    <div class="card border-0 h-100 d-flex flex-column">
+                        <div class="position-relative">
+                            <img src="img/4.jpg" class="card-img-top" alt="La joya celeste"
+                                style="height: 220px; object-fit: cover; border-radius: 0;">
+                            <span class="badge position-absolute px-2 py-1"
+                                style="top: 8px; left: 8px; background-color: #dc3545; color: white; font-size: 0.7rem; font-weight: bold;">MÉXICO</span>
+                        </div>
+                        <div class="card-body p-3 d-flex flex-column flex-grow-1">
+                            <h5 class="card-title font-weight-bold mb-2 text-dark"
+                                style="font-size: 1rem; line-height: 1.2;">
+                                La joya celeste que hace soñar a Cruz Azul
+                            </h5>
+                            <div class="mt-auto">
+                                <p class="text-muted mb-0" style="font-size: 0.8rem;">JAVIER CARDOSO</p>
+                                <hr class="my-2" style="border-color: #ddd;">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+
+            <!-- Barra de "Es noticia" -->
+            <div class="bg-light border py-0 px-3 mb-4">
+                <div class="d-flex flex-wrap align-items-center">
+                    <span class="font-weight-bold mr-3 text-dark">Es noticia:</span>
+                    <a href="#" class="text-dark mr-3" style="text-decoration: none; font-size: 0.9rem;">Mercado de
+                        fichajes</a>
+                    <a href="#" class="text-dark mr-3" style="text-decoration: none; font-size: 0.9rem;">Rodrigo</a>
+                    <a href="#" class="text-dark mr-3" style="text-decoration: none; font-size: 0.9rem;">Fernando
+                        Alonso</a>
+                    <a href="#" class="text-dark mr-3" style="text-decoration: none; font-size: 0.9rem;">Lewandowski</a>
+                    <a href="#" class="text-dark mr-3" style="text-decoration: none; font-size: 0.9rem;">Usain Bolt</a>
+                    <a href="#" class="text-dark mr-3" style="text-decoration: none; font-size: 0.9rem;">Donald
+                        Trump</a>
+                    <a href="#" class="text-dark" style="text-decoration: none; font-size: 0.9rem;">Calendario Liga</a>
+                </div>
+            </div>
+
+            <!-- Segunda fila de noticias -->
+            <div class="row mb-4">
+                <!-- Primera fila de noticias secundarias -->
+                <div class="col-lg-5 col-md-5 mb-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="img/auto.png" class="img-fluid" alt="LaLiga Santander" style="width: 100%; height: 80px; object-fit: cover;">
+                        </div>
+                        <div class="col-8">
+                            <span class="badge px-2 py-1 mb-1" style="background-color: #007bff; color: white; font-size: 0.6rem; font-weight: bold;">LALIGA SANTANDER</span>
+                            <h6 class="font-weight-bold mb-1" style="font-size: 0.9rem; line-height: 1.2;">
+                                ¿Qué equipos y qué jugadores estuvieron en la reunión de la AFE?
+                            </h6>
+                            <div class="d-flex align-items-center mt-2">
+                                <span class="text-muted" style="font-size: 0.75rem;">ROCÍO GUEVARA SEVILLA</span>
+                                <span class="text-danger ml-2" style="font-size: 0.75rem;">📄 84</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-2" style="border-color: #ddd;">
+                </div>
+                
+                <!-- Espacio en el medio -->
+                <div class="col-lg-2 col-md-2"></div>
+
+                <div class="col-lg-5 col-md-5 mb-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="img/3.jpg" class="img-fluid" alt="Sevilla FC" style="width: 100%; height: 80px; object-fit: cover;">
+                        </div>
+                        <div class="col-8">
+                            <span class="badge px-2 py-1 mb-1" style="background-color: #17a2b8; color: white; font-size: 0.6rem; font-weight: bold;">SEVILLA FC</span>
+                            <h6 class="font-weight-bold mb-1" style="font-size: 0.9rem; line-height: 1.2;">
+                                Draxler y Martial, nombres 'top' en la recta final del mercado
+                            </h6>
+                            <div class="mt-2">
+                                <span class="text-muted" style="font-size: 0.75rem;">ROCÍO GUEVARA SEVILLA</span>
+                                <span class="text-danger ml-2" style="font-size: 0.75rem;">📄 84</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-2" style="border-color: #ddd;">
+                </div>
+            </div>
+            <hr class="my-3" style="border-color: #ddd;">
+
+            <!-- Segunda fila de noticias secundarias -->
+            <div class="row mb-4">
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <div class="card border-0">
+                        <div class="position-relative">
+                            <img src="img/2.jpg" class="card-img-top" alt="Real Madrid" style="height: 180px; object-fit: cover; border-radius: 0;">
+                            <span class="badge position-absolute px-2 py-1" style="top: 8px; left: 8px; background-color: #007bff; color: white; font-size: 0.7rem; font-weight: bold;">REAL MADRID</span>
+                        </div>
+                        <div class="card-body p-3">
+                            <h6 class="card-title font-weight-bold mb-0 text-dark" style="font-size: 1rem; line-height: 1.2;">
+                                Lunin, muy cerca de irse cedido al Leganés
+                            </h6>
+                        </div>
+                    </div>
+                    <hr class="my-2" style="border-color: #ddd;">
+                </div>
+
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <div class="card border-0">
+                        <div class="position-relative">
+                            <img src="img/4.jpg" class="card-img-top" alt="Real Madrid" style="height: 180px; object-fit: cover; border-radius: 0;">
+                            <span class="badge position-absolute px-2 py-1" style="top: 8px; left: 8px; background-color: #007bff; color: white; font-size: 0.7rem; font-weight: bold;">REAL MADRID</span>
+                        </div>
+                        <div class="card-body p-3">
+                            <h6 class="card-title font-weight-bold mb-0 text-dark" style="font-size: 1rem; line-height: 1.2;">
+                                Algo pasa con Rodrigo
+                            </h6>
+                        </div>
+                    </div>
+                    <hr class="my-2" style="border-color: #ddd;">
+                </div>
+
+                <!-- Espacio a la derecha para la tercera imagen -->
+                <div class="col-lg-4 col-md-4 mb-3"></div>
+            </div>
+            <br>
+        </section>
     </div>
 
     <!-- Footer -->
@@ -213,14 +401,22 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h6 class="text-white font-weight-bold mb-3">Marca</h6>
                     <ul class="list-unstyled mb-0">
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Última hora</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Apuestas Deportivas</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Clasificación LaLiga</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Resultados en directo</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Hemeroteca Marca</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Marca en Orbit</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Marca Madrid</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Zona Marca</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Última hora</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Apuestas Deportivas</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Clasificación LaLiga</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Resultados en directo</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Hemeroteca Marca</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Marca en Orbit</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Marca Madrid</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Zona Marca</a></li>
                     </ul>
                 </div>
 
@@ -228,13 +424,20 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h6 class="text-white font-weight-bold mb-3">Ocio y Medio</h6>
                     <ul class="list-unstyled mb-0">
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Tiramillas</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Marca Moda</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">BULEVARD Magazine</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Actualidad</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Programación TV</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Marca Eventos</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Mi bebé y yo</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Tiramillas</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Marca Moda</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">BULEVARD Magazine</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Actualidad</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Programación TV</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Marca Eventos</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Mi bebé y yo</a></li>
                     </ul>
                 </div>
 
@@ -242,13 +445,20 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h6 class="text-white font-weight-bold mb-3">Unidad Editorial</h6>
                     <ul class="list-unstyled mb-0">
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">El Mundo</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Expansión</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">CuídatePlus</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Diario Médico</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Correo Farmacéutico</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Suplementos deportivos</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Suscripciones El Mundo</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">El Mundo</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Expansión</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">CuídatePlus</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Diario Médico</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Correo Farmacéutico</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Suplementos deportivos</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Suscripciones El Mundo</a></li>
                     </ul>
                 </div>
 
@@ -256,10 +466,14 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h6 class="text-white font-weight-bold mb-3">Formación y Empleo</h6>
                     <ul class="list-unstyled mb-0">
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Escuela Unidad Editorial</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Unidad Editorial</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">Expansión y Empleo</a></li>
-                        <li class="mb-1"><a href="#" class="text-light text-decoration-none" style="font-size: 0.8rem;">CuídatePlus Psicología</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Escuela Unidad Editorial</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Unidad Editorial</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">Expansión y Empleo</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none"
+                                style="font-size: 0.8rem;">CuídatePlus Psicología</a></li>
                     </ul>
                 </div>
             </div>
@@ -272,55 +486,68 @@
                 <div class="col-12">
                     <!-- Links and Copyright -->
                     <div class="d-flex flex-wrap justify-content-center align-items-center mb-3">
-                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Términos y condiciones de uso</a>
+                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Términos y
+                            condiciones de uso</a>
                         <span class="text-muted mx-1">|</span>
-                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Política de privacidad</a>
+                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Política de
+                            privacidad</a>
                         <span class="text-muted mx-1">|</span>
-                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Política de cookies</a>
+                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Política de
+                            cookies</a>
                         <span class="text-muted mx-1">|</span>
-                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Certificado por OJD</a>
+                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Certificado
+                            por OJD</a>
                         <span class="text-muted mx-1">|</span>
-                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Contacto</a>
+                        <a href="#" class="text-light text-decoration-none mx-2"
+                            style="font-size: 0.75rem;">Contacto</a>
                         <span class="text-muted mx-1">|</span>
-                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Publicidad</a>
+                        <a href="#" class="text-light text-decoration-none mx-2"
+                            style="font-size: 0.75rem;">Publicidad</a>
                         <span class="text-muted mx-1">|</span>
                         <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Ayuda</a>
                         <span class="text-muted mx-1">|</span>
-                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Nuestro equipo</a>
+                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Nuestro
+                            equipo</a>
                     </div>
-                    
+
                     <!-- Copyright -->
                     <div class="text-center mb-3">
-                        <span class="text-muted" style="font-size: 0.75rem;">© Agosto 2024 Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados.</span>
+                        <span class="text-muted" style="font-size: 0.75rem;">© Agosto 2024 Unidad Editorial Información
+                            Deportiva, S.L.U. Todos los derechos reservados.</span>
                     </div>
-                    
+
                     <!-- Social Media Section -->
                     <div class="text-center">
                         <span class="text-muted d-block mb-2" style="font-size: 0.8rem;">Síguenos en:</span>
                         <div class="d-flex justify-content-center">
                             <a href="#" class="text-light mx-2 d-inline-block" title="Facebook" style="opacity: 0.8;">
                                 <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                                 </svg>
                             </a>
                             <a href="#" class="text-light mx-2 d-inline-block" title="Twitter" style="opacity: 0.8;">
                                 <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
                                 </svg>
                             </a>
                             <a href="#" class="text-light mx-2 d-inline-block" title="Instagram" style="opacity: 0.8;">
                                 <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                                 </svg>
                             </a>
                             <a href="#" class="text-light mx-2 d-inline-block" title="YouTube" style="opacity: 0.8;">
                                 <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                                 </svg>
                             </a>
                             <a href="#" class="text-light mx-2 d-inline-block" title="RSS" style="opacity: 0.8;">
                                 <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.71-7.118-15.758-15.839-15.82zm0-3.368c10.58.046 19.152 8.594 19.183 19.188h4.817c-.03-13.231-10.755-23.954-24-24v4.812z"/>
+                                    <path
+                                        d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.71-7.118-15.758-15.839-15.82zm0-3.368c10.58.046 19.152 8.594 19.183 19.188h4.817c-.03-13.231-10.755-23.954-24-24v4.812z" />
                                 </svg>
                             </a>
                         </div>
