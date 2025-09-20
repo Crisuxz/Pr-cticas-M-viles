@@ -12,32 +12,79 @@
 
     <title>Hello, world!</title>
 </head>
-        <style>
-            /* Hover negro solo en la barra roja */
-            .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .nav-link:hover,
-            .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .nav-link:focus {
-                background-color: #111 !important;
-                color: #fff !important;
-            }
-            /* Mostrar dropdown solo al pasar el mouse en la barra roja */
-            .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .dropdown:hover .dropdown-menu {
-                display: block;
-                margin-top: 0;
-            }
-            .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .dropdown-menu {
-                border-radius: 0 0 0.5rem 0.5rem;
-                margin-top: 0;
-            }
-        </style>
+<style>
+    /* Hover negro solo en la barra roja */
+    .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .nav-link:hover,
+    .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .nav-link:focus {
+        background-color: #111 !important;
+        color: #fff !important;
+    }
+
+    /* Mostrar dropdown solo al pasar el mouse en la barra roja */
+    .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .dropdown-menu {
+        border-radius: 0 0 0.5rem 0.5rem;
+        margin-top: 0;
+    }
+
+    /* Estilos adicionales para mejorar la apariencia */
+    .media:hover {
+        background-color: rgba(0, 123, 255, 0.05);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .badge {
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    .media-object {
+        transition: transform 0.2s ease;
+    }
+
+    .media:hover .media-object {
+        transform: scale(1.05);
+    }
+
+    .text-danger {
+        font-weight: 600;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .col-lg-4 {
+            margin-top: 20px;
+        }
+        
+        .display-4 {
+            font-size: 1.8rem;
+        }
+        
+        .lead {
+            font-size: 1rem;
+        }
+    }
+</style>
 
 <body>
     <header>
         <div class="container-fluid px-0">
             <!-- Barra de noticias -->
-            <div class="bg-light border-bottom py-2 px-3 d-flex flex-nowrap align-items-center justify-content-center w-100">
+            <div
+                class="bg-light border-bottom py-2 px-3 d-flex flex-nowrap align-items-center justify-content-center w-100">
                 <span class="font-weight-bold mr-2 small mb-0">Es noticia:</span>
                 <span class="small text-muted text-truncate mb-0" style="white-space: nowrap; font-size: 0.75rem;">
-                    Vuelta a España | Mercado de fichajes | Horario libres MotoGP | Perfil Vuelta a España hoy | Grecia - Turquía dónde ver | Las Palmas - Real Sociedad B dónde ver | Partidos hoy EuroBasket | Alemania - Finlandia dónde ver | Calendario Mundial Atletismo
+                    Vuelta a España | Mercado de fichajes | Horario libres MotoGP | Perfil Vuelta a España hoy | Grecia
+                    - Turquía dónde ver | Las Palmas - Real Sociedad B dónde ver | Partidos hoy EuroBasket | Alemania -
+                    Finlandia dónde ver | Calendario Mundial Atletismo
                 </span>
             </div>
             <!-- Barra principal -->
@@ -45,30 +92,49 @@
                 <div class="col-12 d-flex align-items-center justify-content-between position-relative">
                     <!-- Izquierda: imágenes y textos con pipes -->
                     <div class="d-flex align-items-center pr-0 ">
-                        <button class="btn btn-link p-0 mr-2" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img src="img/download.jpg" width="32" height="32" class="img-fluid rounded" alt="Portada"></button>
-                        <button class="btn btn-link font-weight-bold mr-3" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">La portada de hoy</button>
+                        <button class="btn btn-link p-0 mr-2"
+                            style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img
+                                src="img/download.jpg" width="32" height="32" class="img-fluid rounded"
+                                alt="Portada"></button>
+                        <button class="btn btn-link font-weight-bold mr-3"
+                            style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">La
+                            portada de hoy</button>
                         <div class="border-left mx-2" style="height: 32px;"></div>
-                        <button class="btn btn-link p-0 mr-2" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img src="img/RadioMARCA.svg.png" width="32" height="32" class="img-fluid" alt="Radio MARCA"></button>
-                        <button class="btn btn-link font-weight-bold mr-3" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">Radio MARCA</button>
+                        <button class="btn btn-link p-0 mr-2"
+                            style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img
+                                src="img/RadioMARCA.svg.png" width="32" height="32" class="img-fluid"
+                                alt="Radio MARCA"></button>
+                        <button class="btn btn-link font-weight-bold mr-3"
+                            style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">Radio
+                            MARCA</button>
                         <div class="border-left mx-2" style="height: 32px;"></div>
-                        <button class="btn btn-link p-0 mr-2" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img src="img/1sITgoTL_400x400.jpg" width="32" height="32" class="img-fluid" alt="CuídatePlus"></button>
-                        <button class="btn btn-link font-weight-bold mr-3" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">CuídatePlus</button>
+                        <button class="btn btn-link p-0 mr-2"
+                            style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img
+                                src="img/1sITgoTL_400x400.jpg" width="32" height="32" class="img-fluid"
+                                alt="CuídatePlus"></button>
+                        <button class="btn btn-link font-weight-bold mr-3"
+                            style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;">CuídatePlus</button>
                     </div>
                     <!-- Centro absoluto: logo MARCA -->
-                    <div class="position-absolute w-100 d-flex justify-content-center" style="left:0;top:0;bottom:0;pointer-events:none;">
-                        <button class="btn btn-link p-0" style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img src="img/Marca.svg.png" height="56" alt="MARCA" style="pointer-events:auto;"></button>
+                    <div class="position-absolute w-100 d-flex justify-content-center"
+                        style="left:0;top:0;bottom:0;pointer-events:none;">
+                        <button class="btn btn-link p-0"
+                            style="color: #111; background: none !important; box-shadow: none !important; outline: none !important;"><img
+                                src="img/Marca.svg.png" height="56" alt="MARCA" style="pointer-events:auto;"></button>
                     </div>
                     <!-- Derecha: botones -->
                     <div class="d-flex align-items-center pl-0">
                         <button class="btn  border mr-2 d-flex align-items-center">
-                            <img src="img/download.jpg" width="20" height="14" class="mr-1" alt="ES"> <span class="ml-1">ES</span>
+                            <img src="img/download.jpg" width="20" height="14" class="mr-1" alt="ES"> <span
+                                class="ml-1">ES</span>
                         </button>
                         <button class="btn btn-outline-warning font-weight-bold mr-2 px-3">
                             <span style="color: #d6001c;">CLUB</span><span style="color: #333;">MARCA</span>
                         </button>
                         <button class="btn border font-weight-bold px-3 d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person mr-1" viewBox="0 0 16 16">
-                              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 14s-1 0-1-1 1-4 7-4 7 3 7 4-1 1-1 1H2z"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person mr-1" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 14s-1 0-1-1 1-4 7-4 7 3 7 4-1 1-1 1H2z" />
                             </svg>
                             <span class="ml-1">Iniciar sesión</span>
                         </button>
@@ -77,94 +143,253 @@
             </div>
         </div>
     </header>
-        <!-- Barra de navegación secundaria con menús desplegables -->
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #c00;">
+    <!-- Barra de navegación secundaria con menús desplegables -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #c00;">
         <div class="container px-0">
-                <ul class="navbar-nav mx-auto w-100 d-flex flex-row justify-content-center">
-                    <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="futbolDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fútbol</a>
-                        <div class="dropdown-menu" aria-labelledby="futbolDropdown">
-                            <a class="dropdown-item" href="#">LaLiga EA Sports</a>
-                            <a class="dropdown-item" href="#">LaLiga Hypermotion</a>
-                            <a class="dropdown-item" href="#">Champions League</a>
-                            <a class="dropdown-item" href="#">Europa League</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="baloncestoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Baloncesto</a>
-                        <div class="dropdown-menu" aria-labelledby="baloncestoDropdown">
-                            <a class="dropdown-item" href="#">Liga Endesa</a>
-                            <a class="dropdown-item" href="#">NBA</a>
-                            <a class="dropdown-item" href="#">Euroliga</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="motorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Motor</a>
-                        <div class="dropdown-menu" aria-labelledby="motorDropdown">
-                            <a class="dropdown-item" href="#">Fórmula 1</a>
-                            <a class="dropdown-item" href="#">MotoGP</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="polideportivoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Polideportivo</a>
-                        <div class="dropdown-menu" aria-labelledby="polideportivoDropdown">
-                            <a class="dropdown-item" href="#">Tenis</a>
-                            <a class="dropdown-item" href="#">Ciclismo</a>
-                            <a class="dropdown-item" href="#">Atletismo</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="cochesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Coches</a>
-                        <div class="dropdown-menu" aria-labelledby="cochesDropdown">
-                            <a class="dropdown-item" href="#">Actualidad</a>
-                            <a class="dropdown-item" href="#">Pruebas</a>
-                        </div>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link font-weight-bold text-white" href="#">Última hora</a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link font-weight-bold text-white" href="#">Fantasy</a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link font-weight-bold text-white" href="#">Agenda TV</a>
-                    </li>
-                    <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="masDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Más +</a>
-                        <div class="dropdown-menu" aria-labelledby="masDropdown">
-                            <a class="dropdown-item" href="#">E-Sports</a>
-                            <a class="dropdown-item" href="#">Golf</a>
-                            <a class="dropdown-item" href="#">Otros deportes</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Barra de escudos -->
+            <ul class="navbar-nav mx-auto w-100 d-flex flex-row justify-content-center">
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="futbolDropdown"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fútbol</a>
+                    <div class="dropdown-menu" aria-labelledby="futbolDropdown">
+                        <a class="dropdown-item" href="#">LaLiga EA Sports</a>
+                        <a class="dropdown-item" href="#">LaLiga Hypermotion</a>
+                        <a class="dropdown-item" href="#">Champions League</a>
+                        <a class="dropdown-item" href="#">Europa League</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="baloncestoDropdown"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Baloncesto</a>
+                    <div class="dropdown-menu" aria-labelledby="baloncestoDropdown">
+                        <a class="dropdown-item" href="#">Liga Endesa</a>
+                        <a class="dropdown-item" href="#">NBA</a>
+                        <a class="dropdown-item" href="#">Euroliga</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="motorDropdown"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Motor</a>
+                    <div class="dropdown-menu" aria-labelledby="motorDropdown">
+                        <a class="dropdown-item" href="#">Fórmula 1</a>
+                        <a class="dropdown-item" href="#">MotoGP</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="polideportivoDropdown"
+                        role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Polideportivo</a>
+                    <div class="dropdown-menu" aria-labelledby="polideportivoDropdown">
+                        <a class="dropdown-item" href="#">Tenis</a>
+                        <a class="dropdown-item" href="#">Ciclismo</a>
+                        <a class="dropdown-item" href="#">Atletismo</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="cochesDropdown"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Coches</a>
+                    <div class="dropdown-menu" aria-labelledby="cochesDropdown">
+                        <a class="dropdown-item" href="#">Actualidad</a>
+                        <a class="dropdown-item" href="#">Pruebas</a>
+                    </div>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link font-weight-bold text-white" href="#">Última hora</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link font-weight-bold text-white" href="#">Fantasy</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link font-weight-bold text-white" href="#">Agenda TV</a>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="masDropdown"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Más +</a>
+                    <div class="dropdown-menu" aria-labelledby="masDropdown">
+                        <a class="dropdown-item" href="#">E-Sports</a>
+                        <a class="dropdown-item" href="#">Golf</a>
+                        <a class="dropdown-item" href="#">Otros deportes</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Barra de escudos -->
     <div class="bg-light border-bottom">
         <div class="container d-flex flex-wrap justify-content-center py-2">
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/1Alaves.png" alt="Alaves" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/2Atletico-de-bilbao.png" alt="Atletico de Bilbao" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/4Barca.png" alt="Barca" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/5betis.png" alt="Betis" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/6celta-de-vigo.png" alt="Celta de Vigo" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/7elche.png" alt="Elche" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/8Espanyol.png" alt="Espanyol" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/9getafe.png" alt="Getafe" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/10girona.png" alt="Girona" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/11levante.png" alt="Levante" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/12mallorca.png" alt="Mallorca" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/13osasuna.png" alt="Osasuna" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/14oviedo.png" alt="Oviedo" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/15rayo-vallecano.png" alt="Rayo Vallecano" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/16real-madrid.png" alt="Real Madrid" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/17real-sociedad.png" alt="Real Sociedad" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/18sevilla.png" alt="Sevilla" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/19valencia.png" alt="Valencia" style="height:30px;"></button>
-            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/20villarreal.png" alt="Villarreal" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/1Alaves.png" alt="Alaves"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/2Atletico-de-bilbao.png"
+                    alt="Atletico de Bilbao" style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/4Barca.png" alt="Barca"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/5betis.png" alt="Betis"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/6celta-de-vigo.png" alt="Celta de Vigo"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/7elche.png" alt="Elche"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/8Espanyol.png" alt="Espanyol"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/9getafe.png" alt="Getafe"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/10girona.png" alt="Girona"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/11levante.png" alt="Levante"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/12mallorca.png" alt="Mallorca"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/13osasuna.png" alt="Osasuna"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/14oviedo.png" alt="Oviedo"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/15rayo-vallecano.png" alt="Rayo Vallecano"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/16real-madrid.png" alt="Real Madrid"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/17real-sociedad.png" alt="Real Sociedad"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/18sevilla.png" alt="Sevilla"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/19valencia.png" alt="Valencia"
+                    style="height:30px;"></button>
+            <button class="btn btn-link p-0 mx-2 btn-escudo"><img src="img/20villarreal.png" alt="Villarreal"
+                    style="height:30px;"></button>
             <!-- Más escudos aquí -->
         </div>
     </div>
+
+    <!-- Banner superior -->
+    <br>
+    <div class="text-center py-2">
+        <img src="img/banner.png" alt="Publicidad" class="img-fluid">
+    </div>
+
+    <!-- Barra Agenda -->
+    <div class="container py-3">
+        <div class="row align-items-center">
+            <!-- Título Agenda -->
+            <div class="col-md-9 d-flex align-items-center flex-wrap gap-3">
+                <h5 class="fw-bold mb-0" style="margin-right: 80px;">Agenda</h5> <!-- separación fija -->
+
+                <!-- Elementos como enlaces estilizados -->
+                <a href="#"
+                    class="d-inline-flex align-items-center justify-content-center text-white text-center text-decoration-none rounded"
+                    style="min-width: 80px; min-height: 40px; background-color: #d6001c;">
+                    En directo
+                </a>
+
+
+                <a href="#"
+                    class="d-inline-flex align-items-center justify-content-center bg-light border text-dark text-center text-decoration-none rounded flex-column"
+                    style="min-width: 80px; min-height: 40px;">
+                    Todas las noticias <br><small class="text-muted">Última hora</small>
+                </a>
+
+                <a href="#"
+                    class="d-inline-flex align-items-center justify-content-center text-white text-center text-decoration-none rounded"
+                    style="min-width: 80px; min-height: 40px; background-color: #d6001c;">
+                    Lo mejor del día
+                </a>
+
+                <a href="#"
+                    class="d-inline-flex align-items-center justify-content-center bg-light border text-dark text-center text-decoration-none rounded flex-column"
+                    style="min-width: 80px; min-height: 40px;">
+                    Agenda <br><small class="text-muted">Jueves 23</small>
+                </a>
+            </div>
+
+            <!-- Link Ver más -->
+            <div class="col-md-3 text-end">
+                <a href="#" class="small text-decoration-none">Ver más directos ▾</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Sección principal de noticias -->
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <!-- Contenido principal -->
+            <div class="col-lg-8 px-4">
+                <!-- Artículo principal con overlay -->
+                <div class="position-relative mb-4">
+                    <img src="img/champions.jpg" alt="Champions League" class="img-fluid w-100"
+                        style="height: 400px; object-fit: cover;">
+                    
+                    <!-- Badge arriba a la izquierda -->
+                    <span class="badge position-absolute" style="background-color: #007bff; color: white; top: 15px; left: 15px; z-index: 10;">CHAMPIONS</span>
+                    
+                    <div class="position-absolute w-100 h-100 d-flex align-items-end"
+                        style="top: 0; left: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7));">
+                        <div class="text-white p-4">
+                            <h2 class="display-4 font-weight-bold mb-3">¿Cuál es el mejor once para reinar en Europa?
+                            </h2>
+                            <p class="lead mb-3">Descubre a los ocho grandes favoritos</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="small">RUBÉN JIMÉNEZ ENRIQUE MEDINA</span>
+                                <span class="text-white">💬 468</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar derecho -->
+            <div class="col-lg-4 bg-light px-4 py-4" style="min-height: 400px;">
+
+                    <!-- Artículos del sidebar -->
+                    <div class="mb-4 pb-3 border-bottom">
+                        <div class="media">
+                            <div class="mr-3">
+                                <img src="img/huelga.jpg" alt="LaLiga Santander" class="rounded"
+                                    style="width: 80px; height: 60px; object-fit: cover;">
+                                <p class="text-muted mb-1 small text-center">A. MEGOLLA Y F. BORJA</p>
+                            </div>
+                            <div class="media-body">
+                                <span class="badge mb-1 small" style="background-color: #007bff; color: white;">LALIGA SANTANDER</span>
+                                <h6 class="font-weight-bold mb-1">Amenaza de huelga</h6>
+                                <div class="text-right">
+                                    <span class="text-danger small">💬 306</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 pb-3 border-bottom">
+                        <div class="media">
+                            <img src="img/recambio.jpg" alt="Fichajes" class="media-object rounded mr-3"
+                                style="width: 80px; height: 60px; object-fit: cover;">
+                            <div class="media-body">
+                                <span class="badge mb-1 small" style="background-color: #007bff; color: white;">FICHAJES</span>
+                                <h6 class="font-weight-bold mb-1">Mercado: el 'recambio' de Filipe Luis puede llegar de
+                                    Alemania</h6>
+                                <div class="text-right">
+                                    <span class="text-danger small">💬 52</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="media">
+                            <img src="img/porterotitular.jpg" alt="Real Madrid" class="media-object rounded mr-3"
+                                style="width: 80px; height: 60px; object-fit: cover;">
+                            <div class="media-body">
+                                <span class="badge mb-1 small" style="background-color: #007bff; color: white;">REAL MADRID</span>
+                                <h6 class="font-weight-bold mb-1">Champions y Liga para el portero titular</h6>
+                                <p class="text-muted mb-1 small">JOSÉ FÉLIX DÍAZ</p>
+                                <div class="text-right">
+                                    <span class="text-danger small">💬 206</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
